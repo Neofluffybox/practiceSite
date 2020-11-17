@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>skeleton</title>
+    <title>R.P.S.</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">"
@@ -12,12 +12,38 @@
 </head>
 
 <body>
-    <header></header>
-    <nav></nav>
-    <section></section>
-    <article></article>
-    <aside></aside>
-    <footer></footer>
+    <header>
+        <div>
+            <h1>We're going to play Rock Paper Scissors!</h1>
+        </div>
+    </header>
+    <section>
+        <article>
+            <div>
+                <span>How many rounds would you like to play?</span>
+            </div>
+            <div>
+                <ul class='roundSelector'>
+                    <li><input type="button" id="one">1 round</li>
+                    <li><input type="button" id="three">3 rounds</li>
+                    <li><input type="button" id="five">5 rounds</li>
+                </ul>
+            </div>
+            <div>
+                <span>
+                    <h2 class="round">Round: </h2>
+                    <h3>"Will you choose rock, paper, or scissors?"</h3>
+                </span>
+            </div>
+            <div>
+                <ul class="rps">
+                    <li><input type='button' id='rock'>Rock</li>
+                    <li><input type='button' id='paper'>Paper</li>
+                    <li><input type='button' id='scissors'>Scissors</li>
+                </ul>
+            </div>
+        </article>
+    </section>
     <script src="/scripts/scripty.js"></script>
 </body>
 

@@ -54,31 +54,74 @@ body {
     display: grid;
     justify-content: center;
     grid-template-columns: 75px 75px 100px 100px 75px 75px;
-    grid-template-rows: 220px auto 100px;
+    grid-template-rows: 50px auto 100px;
     grid-template-areas: 
         "header header header header header header"
-        "left left middle middle right right"
+        "middle middle middle middle middle middle"
         "footer footer footer footer footer footer";
     background-color: #964;
 }
 
 header {
     border: 5px solid green;
+    background-color: #44aa44;
     grid-area: header;
 }
-
-nav {
-    border: 5px solid blue;
-    grid-area: left;
-}
+    header div {
+        display: flex;
+        justify-content: center;
+    }
+        header div h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
 
 section {
     border: 5px solid red;
+    background-color: #44aa44;;
     grid-area: middle;
 }
 
     article {
         border: 5px solid violet;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    article div span h2{
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .rps {
+        display: flex;
+        flex-direction: column;
+    }
+    input {
+        width: 40px;
+        height: 24px;
+        background-color: grey;
+    }
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+    ul li {
+        font-size: 18px;
+        font-weight: 600;
+        color: maroon;
+        
+    }
+    div {
+        display: flex;
+        justify-content: center;
+    }
+    div span {
+        font-size:18px;
+        padding: 25px;
+        background-color: #22cc22;
+    }
+    div ul {
+        background-color: #44aa44;;
     }
 
 aside{
