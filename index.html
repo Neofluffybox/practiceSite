@@ -9,6 +9,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">"
 
     <link rel="stylesheet" href="/stylesheets/stylie.css">
+    <style>
+        #set1 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #set2 {
+            display: none;
+            flex-direction: column;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,28 +30,32 @@
     </header>
     <section>
         <article>
-            <div>
-                <span>How many rounds would you like to play?</span>
+            <div id='set1'>
+                <div>
+                    <span>How many rounds would you like to play?</span>
+                </div>
+                <div>
+                    <ul class='roundSelector'>
+                        <li>1 round<br><input type="button" id="one"></li>
+                        <li>3 rounds<br><input type="button" id="three"></li>
+                        <li>5 rounds<br><input type="button" id="five"></li>
+                    </ul>
+                </div>
             </div>
-            <div>
-                <ul class='roundSelector'>
-                    <li><input type="button" id="one">1 round</li>
-                    <li><input type="button" id="three">3 rounds</li>
-                    <li><input type="button" id="five">5 rounds</li>
-                </ul>
-            </div>
-            <div>
-                <span>
-                    <h2 class="round">Round: </h2>
-                    <h3>"Will you choose rock, paper, or scissors?"</h3>
-                </span>
-            </div>
-            <div>
-                <ul class="rps">
-                    <li><input type='button' id='rock'>Rock</li>
-                    <li><input type='button' id='paper'>Paper</li>
-                    <li><input type='button' id='scissors'>Scissors</li>
-                </ul>
+            <div id='set2'>
+                <div class='set2'>
+                    <span>
+                        <h2 class="round">Round: </h2>
+                        <h3>"Will you choose rock, paper, or scissors?"</h3>
+                    </span>
+                </div>
+                <div class='set2'>
+                    <ul class="rps">
+                        <li>Rock<br><input type='button' id='rock'></li>
+                        <li>Paper<br><input type='button' id='paper'></li>
+                        <li>Scissors<br><input type='button' id='scissors'></li>
+                    </ul>
+                </div>
             </div>
         </article>
     </section>

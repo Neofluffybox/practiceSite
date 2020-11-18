@@ -92,24 +92,22 @@ section {
         font-size: 18px;
         font-weight: bold;
     }
-    .rps {
-        display: flex;
-        flex-direction: column;
-    }
     input {
-        width: 40px;
-        height: 24px;
-        background-color: grey;
+        width: 30px;
+        height: 30px;
+        margin: 12px;
+        background-color: #aaa;
     }
     ul {
         display: flex;
         flex-direction: row;
+        margin: 10px;
     }
     ul li {
         font-size: 18px;
         font-weight: 600;
         color: maroon;
-        
+        margin: 8px;
     }
     div {
         display: flex;
