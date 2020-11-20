@@ -55,8 +55,8 @@ body {
     border: 5px solid black;
     display: grid;
     justify-content: center;
-    grid-template-columns: 75px 75px 100px 100px 75px 75px;
-    grid-template-rows: 50px auto 100px;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
     grid-template-areas: 
         "header header header header header header"
         "middle middle middle middle middle middle"
@@ -79,14 +79,15 @@ header {
         }
 
 section {
-    border: 5px solid red;
+    border: 5px solid brown;
     background-color: #44aa44;;
     grid-area: middle;
 }
 
     article {
-        border: 5px solid violet;
+        border: 5px solid #030;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         flex-direction: column;
     }
@@ -133,6 +134,11 @@ section {
         padding: 15px;
         background-color: #22cc22;
     }
+    div span h1 {
+        font-weight: 600;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #050;
+    }
     div ul {
         background-color: #44aa44;;
     }
@@ -154,8 +160,8 @@ footer{
     border: 5px solid brown;
     grid-area: footer;
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 500px) {
     body {
-        grid-template-columns: 50px 50px 50px 50px 50px 50px;
+        grid-template-columns: auto;
     }
 }
