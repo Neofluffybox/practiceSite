@@ -120,6 +120,10 @@ section {
         color: maroon;
         margin: 8px;
     }
+    #checker {
+        color: maroon;
+        background-color: #aaa;
+    }
     div {
         display: flex;
         justify-content: center;
