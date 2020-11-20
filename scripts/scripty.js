@@ -10,10 +10,13 @@ let cS = 0;
 let cCh = document.querySelector('#cCh');
 let outcome = document.querySelector('#outcome');
 let intro = document.querySelector('.round');
-intro.innerHTML = `Round: ${current}`;
 let score = document.querySelector(`.score`);
-score.innerHTML = `Player: ${pS} || Comp: ${cS}`;
+intro.innerHTML = `Round: ${current}`
 
+function compChoice() {
+    let options = ['rock', 'paper', 'scissors'];
+    return options[Math.floor(Math.random() * options.length)];
+}
 
 function displayToggle(set) {
     var x = document.querySelector(set);
@@ -22,6 +25,62 @@ function displayToggle(set) {
     } else {
         x.style.display = `none`;
     };
+}
+
+function roundTicker() {
+    current++;
+    return intro.innerHTML = `Round: ${current}`;
+}
+
+function rock() {
+    let comp = compChoice();
+    if (comp == 'rock') {
+        cCh.innerHTML = 'Comp chose rock!';
+        outcome.innerHTML = 'It\'s a tie';
+    } else if (comp == 'paper') {
+        cCh.innerHTML = 'Comp chose paper!';
+        outcome.innerHTML = 'You lose';
+        cS++;
+    } else {
+        cCh.innerHTML = 'Comp chose scissors';
+        outcome.innerHTML = 'You win';
+        pS++;
+    };
+    return score.innerHTML = `Player: ${pS} || Comp: ${cS}`;
+}
+
+function paper() {
+    let comp = compChoice();
+    if (comp == 'rock') {
+        cCh.innerHTML = 'Comp chose rock!';
+        outcome.innerHTML = 'You win';
+        pS++;
+    } else if (comp == 'paper') {
+        cCh.innerHTML = 'Comp chose paper!';
+        outcome.innerHTML = 'It\'s a tie';
+    } else {
+        cCh.innerHTML = 'Comp chose scissors';
+        outcome.innerHTML = 'You lose';
+        cS++;
+    };
+    return score.innerHTML = `Player: ${pS} || Comp: ${cS}`;
+}
+
+function scissors() {
+    let comp = compChoice();
+    if (comp == 'rock') {
+        cCh.innerHTML = 'Comp chose rock!';
+        outcome.innerHTML = 'You lose';
+        cS++;
+    } else if (comp == 'paper') {
+        cCh.innerHTML = 'Comp chose paper!';
+        outcome.innerHTML = 'You win';
+        pS++;
+    } else {
+        cCh.innerHTML = 'Comp chose scissors';
+        outcome.innerHTML = 'It\'s a tie';
+    };
+    return score.innerHTML = `Player: ${pS} || Comp: ${cS}`;
 }
 
 btn1.addEventListener('click', () => {
@@ -37,34 +96,14 @@ btn3.addEventListener('click', () => {
 });
 
 btnR.addEventListener('click', () => {
-    let compSelection = Math.floor(Math.random() * 3);
-    if (compSelection == 0) {
-        cCh.innerHTML = `Comp chose rock too!`;
-    } else if (compSelection == 1) {
-        cCh.innerHTML = 'Comp chose paper!';
-    } else {
-        cCh.innerHTML = 'Comp chose scissors!';
-    };
-});
-
+    rock();
+    roundTicker();
+})
 btnP.addEventListener('click', () => {
-    let compSelection = Math.floor(Math.random() * 3);
-    if (compSelection == 0) {
-        cCh.innerHTML = `Comp chose paper too!`;
-    } else if (compSelection == 1) {
-        cCh.innerHTML = 'Comp chose rock!';
-    } else {
-        cCh.innerHTML = 'Comp chose scissors!';
-    };
-});
-
+    paper();
+    roundTicker();
+})
 btnSc.addEventListener('click', () => {
-    let compSelection = Math.floor(Math.random() * 3);
-    if (compSelection == 0) {
-        cCh.innerHTML = `Comp chose scissors too!`;
-    } else if (compSelection == 1) {
-        cCh.innerHTML = 'Comp chose rock!';
-    } else {
-        cCh.innerHTML = 'Comp chose paper!';
-    };
-});
+    scissors();
+    roundTicker();
+})
