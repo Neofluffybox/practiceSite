@@ -68,6 +68,7 @@ header {
     border: 5px solid green;
     background-color: #44aa44;
     grid-area: header;
+    text-align: center;
 }
     header div {
         display: flex;
@@ -91,7 +92,7 @@ section {
         justify-content: center;
         flex-direction: column;
     }
-    #home a{
+    #home a {
         text-decoration: none;
         display: block;
         padding: 6px;
@@ -99,8 +100,6 @@ section {
         border-radius: 20px;
         color: white;
         font-size: 11px;
-        position: absolute;
-        margin-right: 250px;
     }
     article div span h2{
         font-size: 18px;
@@ -145,6 +144,9 @@ section {
         padding: 15px;
         background-color: #22cc22;
     }
+    #special {
+        color: #22cc22;
+    }
     div span h1 {
         font-weight: 600;
         padding-bottom: 15px;
@@ -155,11 +157,10 @@ section {
     }
     .container {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
     }
         .container span{
             text-align: center;
-            width: 100%;
         }
 
 aside{
